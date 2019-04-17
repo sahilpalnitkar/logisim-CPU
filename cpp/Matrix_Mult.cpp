@@ -27,7 +27,7 @@ int main()
         {
             for (int k = 0; k < 3; k++)
             {
-                mat2[i][j] += mat1[i][k] * mat2[k][j];
+                mat3[i][j] += mat1[i][k] * mat2[k][j];
             }
         }
     }  
