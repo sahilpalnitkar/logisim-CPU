@@ -24,7 +24,9 @@
 | `jge`       | `96`   | Jump <= to Dest            | `96 Dest` (2 bytes)    |
 |             |        |                            |                        |
 | `halt`      | `A0`   | Stops execution            | `A0`                   |
-|             |        |                            |                        |
+| Maybe       |
+| `push`      | `B0`   | Push rA to stack           | `B0 rA 08`             |
+| `pop`       | `C0`   | Pop rA from stack          | `C0 rA 08`             |
 
 
 ## Registers
