@@ -1,2 +1,10 @@
 # CSCE-312-Final-Project
-CPU design for CSCE 312 final projecct
+CPU design for CSCE 312 final project
+
+## Tasks
+### Sahil
+- 
+### Simon
+-
+### Anthony
+-
