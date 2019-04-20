@@ -8,4 +8,4 @@ CPU design for CSCE 312 final project
 ### Simon
 - [ ] Memory Control
 ### Anthony
-- [ ] Register File
+- [x] Register File
