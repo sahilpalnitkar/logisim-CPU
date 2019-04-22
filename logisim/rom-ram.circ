@@ -86,12 +86,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="530,260" width="10" x="195" y="115"/>
       <circ-anchor facing="east" height="6" width="6" x="197" y="87"/>
     </appear>
-    <wire from="(510,140)" to="(680,140)"/>
-    <wire from="(460,110)" to="(460,260)"/>
-    <wire from="(400,90)" to="(400,110)"/>
-    <wire from="(400,110)" to="(400,130)"/>
-    <wire from="(370,100)" to="(370,180)"/>
-    <wire from="(270,180)" to="(370,180)"/>
     <wire from="(320,90)" to="(350,90)"/>
     <wire from="(330,160)" to="(360,160)"/>
     <wire from="(270,90)" to="(290,90)"/>
@@ -100,30 +94,25 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(510,80)" to="(530,80)"/>
     <wire from="(270,90)" to="(270,130)"/>
     <wire from="(450,110)" to="(460,110)"/>
+    <wire from="(510,140)" to="(680,140)"/>
+    <wire from="(460,110)" to="(460,260)"/>
+    <wire from="(400,90)" to="(400,110)"/>
+    <wire from="(400,110)" to="(400,130)"/>
+    <wire from="(370,100)" to="(370,180)"/>
+    <wire from="(270,180)" to="(370,180)"/>
     <wire from="(360,100)" to="(360,160)"/>
     <wire from="(270,130)" to="(400,130)"/>
     <wire from="(510,80)" to="(510,140)"/>
     <wire from="(380,80)" to="(510,80)"/>
     <wire from="(670,80)" to="(680,80)"/>
     <wire from="(460,260)" to="(530,260)"/>
+    <comp lib="1" loc="(450,110)" name="NOT Gate"/>
     <comp lib="4" loc="(380,80)" name="Counter"/>
-    <comp lib="1" loc="(320,90)" name="NOT Gate"/>
-    <comp lib="0" loc="(530,260)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="IOENABLE"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(670,80)" name="ROM">
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 8 32
-256*11
-</a>
-    </comp>
     <comp lib="0" loc="(270,180)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="RELOAD"/>
     </comp>
+    <comp lib="1" loc="(320,90)" name="NOT Gate"/>
     <comp lib="0" loc="(680,140)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -132,11 +121,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(330,160)" name="Clock"/>
-    <comp lib="1" loc="(450,110)" name="NOT Gate"/>
+    <comp lib="0" loc="(530,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="IOENABLE"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(670,80)" name="ROM">
+      <a name="dataWidth" val="24"/>
+      <a name="contents">addr/data: 8 24
+256*11
+</a>
+    </comp>
     <comp lib="0" loc="(680,80)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="32"/>
+      <a name="width" val="24"/>
       <a name="label" val="DATAOUT"/>
       <a name="labelloc" val="east"/>
     </comp>
