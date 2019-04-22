@@ -12,21 +12,20 @@
 | `mrmov`     | `40`   | Moves D(rB) to rA          | `40 rA rB D` (1 byte) |
 | `rmmov`     | `50`   | Moves rA to D(rB)          | `50 rA rB D` (1 byte) |
 | `rrmov`     | `60`   | Moves rA to rB             | `60 rA rB`            |
-| `irmov`     | `70`   | Moves V to rB              | `70 FF rB V` (1 byte) |
-| `immov`     | `80`   | Moves V to D(rB)           | `80 FF rB V` (1 byte) |
+| `irmov`     | `70`   | Moves V to rA              | `70 rA F V` (1 byte) |
 |             |        |                            |                       |
-| `jmp`       | `90`   | Unconditional jump to Dest | `90 00 Dest` (1 byte) |
-| `jle`       | `91`   | Jump <= to Dest            | `91 00 Dest` (1 byte) |
-| `jl`        | `92`   | Jump < to Dest             | `92 00 Dest` (1 byte) |
-| `je`        | `93`   | Jump == to Dest            | `93 00 Dest` (1 byte) |
-| `jne`       | `94`   | Jump != to Dest            | `94 00 Dest` (1 byte) |
-| `jg`        | `95`   | Jump > to Dest             | `95 00 Dest` (1 byte) |
-| `jge`       | `96`   | Jump <= to Dest            | `96 00 Dest` (1 byte) |
+| `jmp`       | `90`   | Unconditional jump to Dest | `90 FF Dest` (1 byte) |
+| `jle`       | `91`   | Jump <= to Dest            | `91 FF Dest` (1 byte) |
+| `jl`        | `92`   | Jump < to Dest             | `92 FF Dest` (1 byte) |
+| `je`        | `93`   | Jump == to Dest            | `93 FF Dest` (1 byte) |
+| `jne`       | `94`   | Jump != to Dest            | `94 FF Dest` (1 byte) |
+| `jg`        | `95`   | Jump > to Dest             | `95 FF Dest` (1 byte) |
+| `jge`       | `96`   | Jump <= to Dest            | `96 FF Dest` (1 byte) |
 |             |        |                            |                       |
 | `halt`      | `A0`   | Stops execution            | `A0`                  |
 | Maybe       |
-| `push`      | `B0`   | Push rA to stack           | `B0 rA 0 08`          |
-| `pop`       | `C0`   | Pop rA from stack          | `C0 rA 0 08`          |
+| `push`      | `B0`   | Push rA to stack           | `B0 rA 0 01`          |
+| `pop`       | `C0`   | Pop rA from stack          | `C0 rA 0 01`          |
 
 
 ## Registers
