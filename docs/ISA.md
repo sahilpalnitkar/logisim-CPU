@@ -15,13 +15,13 @@
 | `irmov`     | `70`   | Moves V to rB              | `70 FF rB V` (1 byte) |
 | `immov`     | `80`   | Moves V to D(rB)           | `80 FF rB V` (1 byte) |
 |             |        |                            |                       |
-| `jmp`       | `90`   | Unconditional jump to Dest | `90 00 Dest` (1 byte) |
-| `jle`       | `91`   | Jump <= to Dest            | `91 00 Dest` (1 byte) |
-| `jl`        | `92`   | Jump < to Dest             | `92 00 Dest` (1 byte) |
-| `je`        | `93`   | Jump == to Dest            | `93 00 Dest` (1 byte) |
-| `jne`       | `94`   | Jump != to Dest            | `94 00 Dest` (1 byte) |
-| `jg`        | `95`   | Jump > to Dest             | `95 00 Dest` (1 byte) |
-| `jge`       | `96`   | Jump <= to Dest            | `96 00 Dest` (1 byte) |
+| `jmp`       | `90`   | Unconditional jump to Dest | `90 FF Dest` (1 byte) |
+| `jle`       | `91`   | Jump <= to Dest            | `91 FF Dest` (1 byte) |
+| `jl`        | `92`   | Jump < to Dest             | `92 FF Dest` (1 byte) |
+| `je`        | `93`   | Jump == to Dest            | `93 FF Dest` (1 byte) |
+| `jne`       | `94`   | Jump != to Dest            | `94 FF Dest` (1 byte) |
+| `jg`        | `95`   | Jump > to Dest             | `95 FF Dest` (1 byte) |
+| `jge`       | `96`   | Jump <= to Dest            | `96 FF Dest` (1 byte) |
 |             |        |                            |                       |
 | `halt`      | `A0`   | Stops execution            | `A0`                  |
 | Maybe       |
