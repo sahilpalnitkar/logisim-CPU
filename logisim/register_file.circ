@@ -28,7 +28,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="6x8 Register File"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -61,13 +61,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp loc="(340,190)" name="6x8 Register File"/>
-  </circuit>
   <circuit name="6x8 Register File">
     <a name="circuit" val="6x8 Register File"/>
     <a name="clabel" val=""/>
@@ -351,168 +344,26 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(790,540)" to="(800,540)"/>
     <wire from="(740,410)" to="(750,410)"/>
     <wire from="(750,310)" to="(890,310)"/>
-    <comp lib="0" loc="(1530,90)" name="Pin">
+    <comp lib="0" loc="(970,670)" name="Probe">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="OUTPUT_1"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(320,340)" name="Pin">
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
       <a name="label" val="W_Port_1"/>
     </comp>
-    <comp lib="6" loc="(1805,763)" name="Text"/>
-    <comp lib="1" loc="(830,230)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="2" loc="(460,340)" name="Decoder">
-      <a name="select" val="3"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(310,60)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="INPUT_0"/>
-    </comp>
-    <comp lib="1" loc="(1090,410)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="2" loc="(1360,500)" name="Decoder">
-      <a name="facing" val="west"/>
-      <a name="select" val="3"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="1" loc="(1090,310)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(1090,120)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(970,470)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1090,510)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(970,280)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1090,210)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(920,610)" name="Register">
-      <a name="label" val="%rbp"/>
-    </comp>
-    <comp lib="4" loc="(920,120)" name="Register">
-      <a name="label" val="%eax"/>
-    </comp>
-    <comp lib="2" loc="(1360,310)" name="Decoder">
-      <a name="facing" val="west"/>
-      <a name="select" val="3"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="1" loc="(1170,340)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(970,670)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1170,440)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(710,550)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(1090,610)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1530,60)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="OUTPUT_0"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(740,510)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(920,210)" name="Register">
-      <a name="label" val="%ebx"/>
-    </comp>
-    <comp lib="1" loc="(740,120)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(830,530)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(920,510)" name="Register">
-      <a name="label" val="%rsp"/>
-    </comp>
-    <comp lib="1" loc="(830,140)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(830,630)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(830,430)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(710,650)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(710,450)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(740,410)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(1170,640)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(970,570)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(740,610)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(320,380)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="W_Enable_0"/>
-    </comp>
-    <comp lib="2" loc="(460,520)" name="Decoder">
-      <a name="select" val="3"/>
-      <a name="disabled" val="0"/>
-    </comp>
     <comp lib="1" loc="(740,310)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="1" loc="(740,210)" name="Controlled Buffer">
+    <comp lib="0" loc="(310,100)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="INPUT_1"/>
+    </comp>
+    <comp lib="1" loc="(1170,240)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="4" loc="(920,310)" name="Register">
-      <a name="label" val="%ecx"/>
-    </comp>
-    <comp lib="0" loc="(320,420)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="W_Enable_1"/>
-    </comp>
-    <comp lib="0" loc="(1520,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="R_Enable_1"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(920,410)" name="Register">
-      <a name="label" val="%edx"/>
-    </comp>
-    <comp lib="1" loc="(710,160)" name="Controlled Buffer">
+    <comp lib="1" loc="(1170,640)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1520,400)" name="Pin">
@@ -521,27 +372,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="R_Enable_0"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="1" loc="(710,550)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(740,410)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(1090,410)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="1" loc="(710,250)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
-    <comp lib="6" loc="(1013,99)" name="Text">
-      <a name="text" val="DEBUG Probes"/>
+    <comp lib="4" loc="(920,210)" name="Register">
+      <a name="label" val="%ebx"/>
     </comp>
-    <comp lib="0" loc="(320,300)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="W_Port_0"/>
-    </comp>
-    <comp lib="0" loc="(970,380)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(870,660)" name="Clock">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(970,190)" name="Probe">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(1170,240)" name="Controlled Buffer">
+    <comp lib="1" loc="(710,350)" name="Controlled Buffer">
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1520,320)" name="Pin">
@@ -551,10 +397,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Read_Port_0"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(310,100)" name="Pin">
+    <comp lib="1" loc="(740,210)" name="Controlled Buffer">
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(920,510)" name="Register">
+      <a name="label" val="%rsp"/>
+    </comp>
+    <comp lib="0" loc="(320,420)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="INPUT_1"/>
+      <a name="label" val="W_Enable_1"/>
+    </comp>
+    <comp lib="0" loc="(970,470)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(830,140)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(970,190)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="2" loc="(460,520)" name="Decoder">
+      <a name="select" val="3"/>
+      <a name="disabled" val="0"/>
     </comp>
     <comp lib="0" loc="(1520,360)" name="Pin">
       <a name="facing" val="west"/>
@@ -563,15 +428,143 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Read_Port_1"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(970,280)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
     <comp lib="1" loc="(1170,150)" name="Controlled Buffer">
       <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(1090,610)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(1090,310)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="6" loc="(1013,99)" name="Text">
+      <a name="text" val="DEBUG Probes"/>
+    </comp>
+    <comp lib="1" loc="(1090,210)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(710,450)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1530,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="OUTPUT_1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(710,160)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(740,120)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(1170,340)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(830,530)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(920,610)" name="Register">
+      <a name="label" val="%rbp"/>
+    </comp>
+    <comp lib="4" loc="(920,120)" name="Register">
+      <a name="label" val="%eax"/>
+    </comp>
+    <comp lib="1" loc="(740,510)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(310,60)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="INPUT_0"/>
+    </comp>
+    <comp lib="1" loc="(1170,440)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(830,630)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(1090,510)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(870,660)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="6" loc="(1805,763)" name="Text"/>
+    <comp lib="0" loc="(970,570)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="2" loc="(1360,310)" name="Decoder">
+      <a name="facing" val="west"/>
+      <a name="select" val="3"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(970,380)" name="Probe">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(710,650)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(320,380)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="W_Enable_0"/>
+    </comp>
+    <comp lib="1" loc="(830,430)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(830,230)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(920,410)" name="Register">
+      <a name="label" val="%edx"/>
+    </comp>
+    <comp lib="1" loc="(1090,120)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(740,610)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(1360,500)" name="Decoder">
+      <a name="facing" val="west"/>
+      <a name="select" val="3"/>
+      <a name="disabled" val="0"/>
     </comp>
     <comp lib="1" loc="(830,330)" name="OR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(710,350)" name="Controlled Buffer">
+    <comp lib="0" loc="(1520,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="R_Enable_1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(920,310)" name="Register">
+      <a name="label" val="%ecx"/>
+    </comp>
+    <comp lib="2" loc="(460,340)" name="Decoder">
+      <a name="select" val="3"/>
+      <a name="disabled" val="0"/>
+    </comp>
+    <comp lib="0" loc="(320,300)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="W_Port_0"/>
+    </comp>
+    <comp lib="0" loc="(1530,60)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
+      <a name="label" val="OUTPUT_0"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(1170,540)" name="Controlled Buffer">
       <a name="width" val="8"/>

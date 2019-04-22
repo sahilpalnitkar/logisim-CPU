@@ -38,3 +38,10 @@
 | %edx     | 3    |
 | %rsp     | 4    |
 | %rbp     | 5    |
+
+## Flags
+| Flag      | Code |
+| --------- | ---- |
+| No Flag   | 00   |
+| Neg Flag  | 01   |
+| Zero Flag | 10   |

@@ -5,6 +5,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool name="Splitter">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Probe">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="Controlled Buffer">
@@ -33,7 +39,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="ROM_loader"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -66,73 +72,73 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
+  <circuit name="ROM_loader">
+    <a name="circuit" val="ROM_loader"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(470,80)" to="(530,80)"/>
-    <wire from="(470,200)" to="(530,200)"/>
-    <wire from="(340,160)" to="(340,290)"/>
-    <wire from="(500,140)" to="(680,140)"/>
+    <appear>
+      <rect fill="none" height="75" stroke="#000000" stroke-width="2" width="150" x="50" y="55"/>
+      <text font-family="SansSerif" font-size="12" text-anchor="middle" x="93" y="87">ROM Load</text>
+      <circ-port height="8" pin="270,180" width="8" x="76" y="126"/>
+      <circ-port height="10" pin="680,80" width="10" x="195" y="85"/>
+      <circ-port height="10" pin="680,140" width="10" x="195" y="65"/>
+      <circ-port height="10" pin="530,260" width="10" x="195" y="115"/>
+      <circ-anchor facing="east" height="6" width="6" x="197" y="87"/>
+    </appear>
+    <wire from="(510,140)" to="(680,140)"/>
+    <wire from="(460,110)" to="(460,260)"/>
     <wire from="(400,90)" to="(400,110)"/>
     <wire from="(400,110)" to="(400,130)"/>
-    <wire from="(470,80)" to="(470,100)"/>
-    <wire from="(500,140)" to="(500,160)"/>
-    <wire from="(470,120)" to="(470,200)"/>
-    <wire from="(460,230)" to="(460,260)"/>
-    <wire from="(460,260)" to="(560,260)"/>
-    <wire from="(560,240)" to="(560,260)"/>
-    <wire from="(380,80)" to="(470,80)"/>
-    <wire from="(430,170)" to="(460,170)"/>
-    <wire from="(500,220)" to="(530,220)"/>
-    <wire from="(460,170)" to="(490,170)"/>
+    <wire from="(370,100)" to="(370,180)"/>
+    <wire from="(270,180)" to="(370,180)"/>
     <wire from="(320,90)" to="(350,90)"/>
+    <wire from="(330,160)" to="(360,160)"/>
     <wire from="(270,90)" to="(290,90)"/>
-    <wire from="(370,160)" to="(390,160)"/>
     <wire from="(380,90)" to="(400,90)"/>
-    <wire from="(340,160)" to="(360,160)"/>
     <wire from="(400,110)" to="(420,110)"/>
-    <wire from="(430,220)" to="(450,220)"/>
+    <wire from="(510,80)" to="(530,80)"/>
     <wire from="(270,90)" to="(270,130)"/>
-    <wire from="(500,180)" to="(500,220)"/>
-    <wire from="(460,170)" to="(460,210)"/>
     <wire from="(450,110)" to="(460,110)"/>
-    <wire from="(330,160)" to="(340,160)"/>
-    <wire from="(430,170)" to="(430,220)"/>
-    <wire from="(680,80)" to="(680,140)"/>
     <wire from="(360,100)" to="(360,160)"/>
-    <wire from="(370,100)" to="(370,160)"/>
-    <wire from="(340,290)" to="(600,290)"/>
     <wire from="(270,130)" to="(400,130)"/>
-    <wire from="(600,240)" to="(600,290)"/>
-    <wire from="(460,110)" to="(460,170)"/>
+    <wire from="(510,80)" to="(510,140)"/>
+    <wire from="(380,80)" to="(510,80)"/>
     <wire from="(670,80)" to="(680,80)"/>
-    <comp lib="0" loc="(330,160)" name="Clock"/>
-    <comp lib="1" loc="(500,180)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(320,90)" name="NOT Gate"/>
-    <comp lib="1" loc="(470,120)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="5" loc="(390,160)" name="Button">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(450,110)" name="NOT Gate"/>
+    <wire from="(460,260)" to="(530,260)"/>
     <comp lib="4" loc="(380,80)" name="Counter"/>
-    <comp lib="1" loc="(460,230)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
+    <comp lib="1" loc="(320,90)" name="NOT Gate"/>
+    <comp lib="0" loc="(530,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="IOENABLE"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(670,80)" name="ROM">
-      <a name="contents">addr/data: 8 8
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 8 32
 256*11
 </a>
     </comp>
-    <comp lib="4" loc="(670,200)" name="RAM">
-      <a name="bus" val="separate"/>
+    <comp lib="0" loc="(270,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="RELOAD"/>
+    </comp>
+    <comp lib="0" loc="(680,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ADDROUT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(330,160)" name="Clock"/>
+    <comp lib="1" loc="(450,110)" name="NOT Gate"/>
+    <comp lib="0" loc="(680,80)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="DATAOUT"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
