@@ -5,9 +5,9 @@
 | Instruction | OPcode | Description                | Format                |
 | ----------- | ------ | -------------------------- | --------------------- |
 | `add`       | `00`   | Adds rA to rB              | `00 rA rB`            |
-| `sub`       | `10`   | Subtracts rA from rB       | `10 rA rB`            |
-| `mul`       | `20`   | Multiplies rB by rA        | `20 rA rB`            |
-| `div`       | `30`   | Divides rB by rA           | `30 rA rB`            |
+| `sub`       | `01`   | Subtracts rA from rB       | `01 rA rB`            |
+| `mul`       | `02`   | Multiplies rB by rA        | `02 rA rB`            |
+| `div`       | `03`   | Divides rB by rA           | `03 rA rB`            |
 |             |        |                            |                       |
 | `mrmov`     | `40`   | Moves D(rB) to rA          | `40 rA rB D` (1 byte) |
 | `rmmov`     | `50`   | Moves rA to D(rB)          | `50 rA rB D` (1 byte) |
