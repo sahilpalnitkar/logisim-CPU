@@ -24,7 +24,7 @@
 |             |        |                            |                       |
 | `halt`      | `A0`   | Stops execution            | `A0`                  |
 | Maybe       |
-| `push`      | `B0`   | Push rA to stack           | `B0 rA 0 01`          |
+| `push`      | `B1`   | Push rA to stack           | `B1 rA 0 01`          |
 | `pop`       | `C0`   | Pop rA from stack          | `C0 rA 0 01`          |
 
 
