@@ -58,6 +58,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="file#alu.circ" name="11"/>
   <lib desc="file#pc_increment_logic.circ" name="12"/>
   <lib desc="file#alu_a_logic.circ" name="13"/>
+  <lib desc="file#mem_addr_logic.circ" name="14"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -97,7 +98,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(280,430)" to="(340,430)"/>
-    <wire from="(670,1230)" to="(670,1240)"/>
     <wire from="(850,210)" to="(850,220)"/>
     <wire from="(890,210)" to="(890,220)"/>
     <wire from="(270,1750)" to="(460,1750)"/>
@@ -123,6 +123,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1060,1650)" to="(1060,1750)"/>
     <wire from="(330,110)" to="(410,110)"/>
     <wire from="(780,1650)" to="(850,1650)"/>
+    <wire from="(650,1200)" to="(910,1200)"/>
     <wire from="(330,250)" to="(330,300)"/>
     <wire from="(540,1410)" to="(540,1780)"/>
     <wire from="(800,1240)" to="(800,1550)"/>
@@ -141,10 +142,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(160,450)" to="(160,460)"/>
     <wire from="(440,1770)" to="(490,1770)"/>
     <wire from="(220,1750)" to="(270,1750)"/>
+    <wire from="(270,1130)" to="(640,1130)"/>
     <wire from="(390,240)" to="(390,250)"/>
     <wire from="(440,1770)" to="(440,1780)"/>
     <wire from="(320,330)" to="(320,340)"/>
     <wire from="(110,520)" to="(160,520)"/>
+    <wire from="(670,1150)" to="(670,1240)"/>
     <wire from="(150,400)" to="(150,420)"/>
     <wire from="(440,1410)" to="(540,1410)"/>
     <wire from="(160,490)" to="(160,520)"/>
@@ -168,6 +171,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(530,1780)" to="(540,1780)"/>
     <wire from="(360,1690)" to="(360,1760)"/>
     <wire from="(890,1670)" to="(940,1670)"/>
+    <wire from="(910,1200)" to="(910,1530)"/>
     <wire from="(160,460)" to="(160,470)"/>
     <wire from="(1020,1650)" to="(1060,1650)"/>
     <wire from="(220,400)" to="(220,410)"/>
@@ -201,6 +205,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(290,350)" to="(290,400)"/>
     <wire from="(920,1700)" to="(930,1700)"/>
     <wire from="(650,1430)" to="(650,1480)"/>
+    <wire from="(650,1150)" to="(650,1200)"/>
     <wire from="(220,1750)" to="(220,1870)"/>
     <wire from="(780,160)" to="(790,160)"/>
     <wire from="(300,200)" to="(360,200)"/>
@@ -225,6 +230,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(830,1610)" to="(830,1690)"/>
     <wire from="(590,1410)" to="(590,1750)"/>
     <wire from="(670,1300)" to="(670,1320)"/>
+    <wire from="(660,1090)" to="(660,1110)"/>
     <wire from="(590,1750)" to="(1060,1750)"/>
     <wire from="(170,1780)" to="(200,1780)"/>
     <wire from="(560,1550)" to="(560,1590)"/>
@@ -232,6 +238,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(240,320)" to="(330,320)"/>
     <wire from="(410,1780)" to="(440,1780)"/>
     <wire from="(300,230)" to="(330,230)"/>
+    <wire from="(270,1130)" to="(270,1750)"/>
     <wire from="(320,340)" to="(340,340)"/>
     <wire from="(400,180)" to="(420,180)"/>
     <wire from="(140,450)" to="(140,490)"/>
@@ -264,6 +271,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bus" val="separate"/>
     </comp>
     <comp lib="10" loc="(320,1830)" name="memory_controller"/>
+    <comp lib="0" loc="(660,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM_ADDR"/>
+    </comp>
     <comp lib="2" loc="(220,400)" name="Decoder">
       <a name="select" val="3"/>
       <a name="disabled" val="0"/>
@@ -367,6 +379,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="24"/>
       <a name="label" val="RAM_DATA_IN"/>
     </comp>
+    <comp lib="14" loc="(680,1110)" name="mem_addr"/>
     <comp lib="0" loc="(480,1790)" name="Constant">
       <a name="width" val="8"/>
     </comp>
