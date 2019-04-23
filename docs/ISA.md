@@ -12,7 +12,7 @@
 | `mrmov`     | `40`   | Moves D(rB) to rA          | `40 rA rB D` (1 byte) |
 | `rmmov`     | `50`   | Moves rA to D(rB)          | `50 rA rB D` (1 byte) |
 | `rrmov`     | `60`   | Moves rB to rA             | `60 rA rB`            |
-| `irmov`     | `70`   | Moves V to rA              | `70 rA F V` (1 byte) |
+| `irmov`     | `70`   | Moves V to rA              | `70 rA 0 V` (1 byte)  |
 |             |        |                            |                       |
 | `jmp`       | `90`   | Unconditional jump to Dest | `90 FF Dest` (1 byte) |
 | `jle`       | `91`   | Jump <= to Dest            | `91 FF Dest` (1 byte) |
