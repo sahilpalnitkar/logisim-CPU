@@ -1,2 +1,5 @@
 # Ignore Executables
 *.exe
+
+# Ignore Excel
+*.xlsx
