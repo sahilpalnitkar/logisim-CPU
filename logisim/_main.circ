@@ -56,6 +56,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="file#rom-ram.circ" name="9"/>
   <lib desc="file#memory_control.circ" name="10"/>
   <lib desc="file#alu.circ" name="11"/>
+  <lib desc="file#pc_increment_logic.circ" name="12"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -106,17 +107,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(780,190)" to="(820,190)"/>
     <wire from="(850,1650)" to="(850,1680)"/>
     <wire from="(330,1680)" to="(330,1760)"/>
-    <wire from="(350,1860)" to="(350,1940)"/>
     <wire from="(300,340)" to="(300,370)"/>
     <wire from="(360,200)" to="(360,230)"/>
-    <wire from="(360,1850)" to="(400,1850)"/>
     <wire from="(980,170)" to="(980,280)"/>
     <wire from="(190,410)" to="(220,410)"/>
     <wire from="(200,1780)" to="(200,1940)"/>
     <wire from="(360,230)" to="(380,230)"/>
     <wire from="(360,1690)" to="(830,1690)"/>
     <wire from="(790,170)" to="(820,170)"/>
-    <wire from="(380,1900)" to="(380,1940)"/>
     <wire from="(820,1620)" to="(820,1680)"/>
     <wire from="(1060,1650)" to="(1060,1750)"/>
     <wire from="(330,110)" to="(410,110)"/>
@@ -124,6 +122,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(330,250)" to="(330,300)"/>
     <wire from="(780,1640)" to="(860,1640)"/>
     <wire from="(920,1600)" to="(920,1650)"/>
+    <wire from="(350,1820)" to="(350,1940)"/>
     <wire from="(330,210)" to="(390,210)"/>
     <wire from="(330,250)" to="(390,250)"/>
     <wire from="(280,360)" to="(280,430)"/>
@@ -136,7 +135,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(160,450)" to="(160,460)"/>
     <wire from="(440,1770)" to="(490,1770)"/>
     <wire from="(220,1750)" to="(270,1750)"/>
-    <wire from="(320,1890)" to="(370,1890)"/>
     <wire from="(390,240)" to="(390,250)"/>
     <wire from="(440,1770)" to="(440,1780)"/>
     <wire from="(320,330)" to="(320,340)"/>
@@ -165,6 +163,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(330,310)" to="(330,320)"/>
     <wire from="(300,1430)" to="(300,1760)"/>
     <wire from="(330,230)" to="(330,250)"/>
+    <wire from="(380,1920)" to="(380,1940)"/>
     <wire from="(180,240)" to="(180,260)"/>
     <wire from="(910,1530)" to="(910,1550)"/>
     <wire from="(300,370)" to="(340,370)"/>
@@ -173,14 +172,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(420,180)" to="(450,180)"/>
     <wire from="(910,210)" to="(910,250)"/>
     <wire from="(930,1510)" to="(930,1550)"/>
-    <wire from="(320,1850)" to="(340,1850)"/>
     <wire from="(890,1650)" to="(920,1650)"/>
     <wire from="(890,1690)" to="(920,1690)"/>
     <wire from="(170,380)" to="(190,380)"/>
     <wire from="(200,1940)" to="(350,1940)"/>
     <wire from="(270,1750)" to="(1060,1750)"/>
     <wire from="(690,1530)" to="(910,1530)"/>
-    <wire from="(390,1890)" to="(400,1890)"/>
     <wire from="(330,310)" to="(340,310)"/>
     <wire from="(700,1390)" to="(700,1510)"/>
     <wire from="(300,180)" to="(380,180)"/>
@@ -217,6 +214,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(330,1610)" to="(610,1610)"/>
     <wire from="(400,230)" to="(410,230)"/>
     <wire from="(240,330)" to="(320,330)"/>
+    <wire from="(320,1890)" to="(400,1890)"/>
+    <wire from="(320,1850)" to="(400,1850)"/>
+    <wire from="(510,1360)" to="(640,1360)"/>
     <wire from="(940,1650)" to="(950,1650)"/>
     <wire from="(850,1680)" to="(860,1680)"/>
     <wire from="(540,1730)" to="(540,1780)"/>
@@ -231,6 +231,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(400,230)" name="Controlled Buffer">
       <a name="width" val="24"/>
     </comp>
+    <comp lib="11" loc="(710,1390)" name="alu"/>
     <comp lib="0" loc="(400,1850)" name="Tunnel">
       <a name="label" val="RAM_LOAD_ENABLE"/>
     </comp>
@@ -244,20 +245,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(340,400)" name="Tunnel">
       <a name="label" val="MEMORY_ENABLE"/>
     </comp>
+    <comp lib="12" loc="(510,1340)" name="pc_increment_jump_controller"/>
     <comp lib="1" loc="(860,1640)" name="AND Gate">
       <a name="facing" val="west"/>
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="8" loc="(780,1560)" name="6x8 Register File"/>
+    <comp lib="1" loc="(360,1810)" name="Controlled Buffer"/>
     <comp lib="0" loc="(330,110)" name="Probe">
       <a name="radix" val="16"/>
     </comp>
     <comp lib="5" loc="(180,260)" name="Button">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="11" loc="(710,1390)" name="alu"/>
-    <comp lib="1" loc="(360,1850)" name="Controlled Buffer"/>
     <comp lib="0" loc="(140,490)" name="Clock">
       <a name="facing" val="north"/>
     </comp>
@@ -316,6 +317,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(330,50)" name="Probe">
       <a name="radix" val="16"/>
     </comp>
+    <comp lib="1" loc="(390,1910)" name="Controlled Buffer"/>
     <comp lib="1" loc="(160,470)" name="NOT Gate">
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
@@ -326,7 +328,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="3" loc="(530,1780)" name="Adder"/>
-    <comp lib="1" loc="(390,1890)" name="Controlled Buffer"/>
     <comp lib="0" loc="(340,430)" name="Tunnel">
       <a name="label" val="WRITEBACK_ENABLE"/>
     </comp>
@@ -745,7 +746,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="290,50" width="10" x="55" y="45"/>
       <circ-port height="10" pin="430,50" width="10" x="75" y="45"/>
       <circ-port height="8" pin="190,320" width="8" x="66" y="96"/>
-      <circ-port height="8" pin="190,320" width="8" x="76" y="96"/>
       <circ-anchor facing="east" height="6" width="6" x="97" y="47"/>
     </appear>
     <wire from="(140,290)" to="(170,290)"/>
@@ -768,7 +768,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
-      <a name="label" val="valA_out"/>
+      <a name="label" val="valB_out"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(240,240)" name="Register"/>
@@ -776,12 +776,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(150,240)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="valA_in"/>
-    </comp>
-    <comp lib="0" loc="(190,320)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Enable"/>
+      <a name="label" val="valB_in"/>
     </comp>
     <comp lib="0" loc="(140,290)" name="Clock"/>
     <comp lib="0" loc="(290,50)" name="Pin">
@@ -792,16 +787,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(240,150)" name="Register"/>
+    <comp lib="0" loc="(190,320)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="enable"/>
+    </comp>
     <comp lib="0" loc="(150,150)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="valA_in"/>
     </comp>
     <comp lib="4" loc="(240,240)" name="Register"/>
-    <comp lib="0" loc="(190,320)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="Enable"/>
-    </comp>
   </circuit>
 </project>
