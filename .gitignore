@@ -6,3 +6,7 @@
 
 # Ignore Word
 *.docx
+
+# Ignore C source and assembly
+*.cpp
+*.s
