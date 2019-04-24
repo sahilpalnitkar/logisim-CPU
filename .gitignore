@@ -3,3 +3,6 @@
 
 # Ignore Excel
 *.xlsx
+
+# Ignore Word
+*.docx
