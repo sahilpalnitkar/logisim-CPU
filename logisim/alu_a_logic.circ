@@ -73,14 +73,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-anchor facing="east" height="6" width="6" x="127" y="57"/>
     </appear>
     <wire from="(320,200)" to="(380,200)"/>
-    <wire from="(360,350)" to="(360,420)"/>
     <wire from="(400,360)" to="(400,370)"/>
     <wire from="(400,370)" to="(400,380)"/>
     <wire from="(400,430)" to="(400,440)"/>
     <wire from="(400,440)" to="(400,450)"/>
     <wire from="(420,460)" to="(420,470)"/>
     <wire from="(380,390)" to="(380,400)"/>
+    <wire from="(380,400)" to="(380,420)"/>
     <wire from="(400,410)" to="(400,430)"/>
+    <wire from="(380,420)" to="(490,420)"/>
     <wire from="(380,390)" to="(490,390)"/>
     <wire from="(380,400)" to="(490,400)"/>
     <wire from="(400,380)" to="(400,410)"/>
@@ -102,18 +103,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,350)" to="(490,350)"/>
     <wire from="(360,160)" to="(360,350)"/>
     <wire from="(380,200)" to="(380,390)"/>
-    <wire from="(360,420)" to="(490,420)"/>
     <wire from="(420,460)" to="(490,460)"/>
     <wire from="(420,470)" to="(490,470)"/>
-    <comp lib="2" loc="(530,430)" name="Multiplexer">
-      <a name="select" val="4"/>
-      <a name="width" val="8"/>
-      <a name="enable" val="false"/>
-    </comp>
-    <comp lib="0" loc="(320,250)" name="Constant">
-      <a name="width" val="8"/>
-      <a name="value" val="0x0"/>
-    </comp>
     <comp lib="0" loc="(610,430)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -121,23 +112,32 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALU_A_OUT"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(320,280)" name="Constant">
+    <comp lib="0" loc="(320,250)" name="Constant">
       <a name="width" val="8"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(320,160)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="valA_IN"/>
+    </comp>
+    <comp lib="2" loc="(530,430)" name="Multiplexer">
+      <a name="select" val="4"/>
+      <a name="width" val="8"/>
+      <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(320,200)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="valC_IN"/>
     </comp>
+    <comp lib="0" loc="(320,280)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(230,550)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="ICODE"/>
-    </comp>
-    <comp lib="0" loc="(320,160)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="valA_IN"/>
     </comp>
   </circuit>
 </project>
